@@ -9,6 +9,7 @@ namespace FuelDeliveryApp
 {
     public class RouteConfig
     {
+        //this RegisterRoutes method is called when the application starts.
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

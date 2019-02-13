@@ -26,5 +26,18 @@ namespace FuelDeliveryApp.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Contact( string message)
+        {
+            ViewBag.Message = "thanks for the message";
+
+            return View();
+        }
+
+        public ActionResult Foo()
+        {
+            return View("about");
+        }
     }
 }
