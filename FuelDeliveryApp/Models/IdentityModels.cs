@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using FuelDeliveryApp.DataModels;
 
 namespace FuelDeliveryApp.Models
 {
@@ -20,8 +21,8 @@ namespace FuelDeliveryApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public DbSet<OperatingRegions> OperatingRegions { get; set; }
+        public ApplicationDbContext(): base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
