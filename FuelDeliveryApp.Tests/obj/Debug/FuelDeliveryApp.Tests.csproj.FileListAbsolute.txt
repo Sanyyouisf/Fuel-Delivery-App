@@ -1,1 +1,0 @@
-C:\Users\Developer\projects\FuelDeliveryApp\FuelDeliveryApp.Tests\obj\Debug\FuelDeliveryApp.Tests.csprojResolveAssemblyReference.cache
