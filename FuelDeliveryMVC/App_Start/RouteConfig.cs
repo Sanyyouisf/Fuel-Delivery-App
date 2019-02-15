@@ -13,6 +13,9 @@ namespace FuelDeliveryMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //to enable attribute routing
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
