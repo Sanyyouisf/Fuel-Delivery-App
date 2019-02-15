@@ -32,7 +32,7 @@ namespace FuelDeliveryMVC.Controllers
         //public IEnumerable<OperatingRegion> Index()
         public ActionResult Index()
         {
-            List<OperatingRegion> RegionList = db.OperatingRegion.ToList();
+            List<OperatingRegion> RegionList = db.operatingRegion.ToList();
             return View(RegionList);
         }
 

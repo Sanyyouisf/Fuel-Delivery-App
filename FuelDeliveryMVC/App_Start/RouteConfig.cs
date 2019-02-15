@@ -19,8 +19,8 @@ namespace FuelDeliveryMVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-                defaults: new { controller = "OperatingRegion", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                //defaults: new { controller = "OperatingRegion", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
