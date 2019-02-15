@@ -7,12 +7,18 @@ using System.Web;
 
 namespace FuelDeliveryMVC.Models
 {
-    [Table("OperatingRegion")]
-    public class OperatingRegion
+    [Table("Customer")]
+    public class Customer
     {
         [Key]
+        public int customerId { get; set; }
+
         public int regionId { get; set; }
 
-        public string regionName { get; set; }
+        public string customerName { get; set; }
+
+        public string customerAddress { get; set; }
+
+        public decimal maxNoOfGallons { get; set; }
     }
 }

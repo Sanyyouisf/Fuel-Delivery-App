@@ -1,12 +1,23 @@
-﻿@model FuelDeliveryMVC.Models.OperatingRegion
+﻿@*@model FuelDeliveryMVC.Models.OperatingRegion*@
+@using FuelDeliveryMVC.Models;
+
+@model IEnumerable<OperatingRegion>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "List Of Regions";
 }
-<h2>Index</h2>
+<h2>Operating Regions</h2>
 <div>
     <h4>OperatingRegion</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <ul>
+        @foreach(OperatingRegion region in @Model)
+        {
+            <li>@Html.ActionLink(region.regionName, "Details",new { id = region.regionId}) </li>
+        }
+    </ul>
+
+    @*incase we return the region detais*@
+    @*<dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.regionId)
         </dt>
@@ -19,6 +30,6 @@
         <dd>
             <h1>Name :@Html.DisplayFor(model => model.regionName)</h1>
         </dd>
-    </dl>
+    </dl>*@
 </div>
 
