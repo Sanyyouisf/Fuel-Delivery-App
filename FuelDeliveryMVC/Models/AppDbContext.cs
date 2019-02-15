@@ -10,6 +10,7 @@ namespace FuelDeliveryMVC.Models
     public class AppDbContext : DbContext
     {
         public AppDbContext() : base("FuelDelivery") { }
-        public DbSet<OperatingRegion> OperatingRegions { get; set; }
+        public DbSet<OperatingRegion> OperatingRegion { get; set; }
+        public DbSet<Customer> customer { get; set; }
     }
 }

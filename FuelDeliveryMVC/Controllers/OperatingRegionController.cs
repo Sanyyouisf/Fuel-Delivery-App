@@ -15,20 +15,25 @@ namespace FuelDeliveryMVC.Controllers
         private AppDbContext db = new AppDbContext();
 
         // GET: OperatingRegion by id
-        [HttpGet, Route ("OperatingRegion/Index/{id}")]
-        public ActionResult Index(int id)
+        [HttpGet, Route ("OperatingRegion/Details/{id}")]
+        public ActionResult Details(int id)
         {
-            //return single region
-            OperatingRegion region = db.OperatingRegions.FirstOrDefault(s => s.regionId == id);
-            return View(region);
+            //return single region details
+            // OperatingRegion region = db.OperatingRegion.FirstOrDefault(s => s.regionId == id);
+            //return View(region);
+
+            //return all the customers for certain region
+            IQueryable<Customer> customersRegion =  db.customer.Where(c => c.regionId == id);
+            return View(customersRegion);
         }
 
         //get All the Operating Regions
         [HttpGet,Route("OperatingRegion/Index")]
-        public IEnumerable<OperatingRegion> Index()
+        //public IEnumerable<OperatingRegion> Index()
+        public ActionResult Index()
         {
-            IEnumerable<OperatingRegion> RegionList = db.OperatingRegions.ToList();
-            return RegionList;
+            List<OperatingRegion> RegionList = db.OperatingRegion.ToList();
+            return View(RegionList);
         }
 
     }
