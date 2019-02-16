@@ -26,5 +26,8 @@ namespace FuelDeliveryMVC.Controllers
             List<DeliveryEvent> deliveriesList = db.deliveryEvent.ToList();
             return View(deliveriesList);
         }
+
+        //create new Delivery event 
+        //[HttpPost]
     }
 }
