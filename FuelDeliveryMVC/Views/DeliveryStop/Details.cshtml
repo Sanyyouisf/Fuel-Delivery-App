@@ -1,0 +1,42 @@
+﻿@model FuelDeliveryMVC.Models.DeliveryStop
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeliveryStop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deliveryEventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deliveryEventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noOfGallons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noOfGallons)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.deliveryStopId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

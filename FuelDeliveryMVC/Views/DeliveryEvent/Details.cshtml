@@ -1,0 +1,34 @@
+﻿@model FuelDeliveryMVC.Models.DeliveryEvent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeliveryEvent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.truckId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.truckId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.deliveryEventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
