@@ -18,5 +18,9 @@ namespace FuelDeliveryMVC.Models
         public DbSet<Driver> driver { get; set; }
 
         public DbSet<Truck> truck { get; set; }
+
+        public DbSet<DeliveryEvent> deliveryEvent { get; set; }
+
+        public DbSet<DeliveryStop> deliveryStop { get; set; }
     }
 }

@@ -147,6 +147,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DeliveryEventController.cs" />
+    <Compile Include="Controllers\DeliveryStopController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OperatingRegionController.cs" />
@@ -156,6 +158,8 @@
     </Compile>
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DeliveryEvent.cs" />
+    <Compile Include="Models\DeliveryStop.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\OperatingRegion.cs" />
     <Compile Include="Models\Truck.cs" />
@@ -250,6 +254,10 @@
     <Content Include="Views\Driver\Details.cshtml" />
     <Content Include="Views\Truck\Index.cshtml" />
     <Content Include="Views\Truck\Details.cshtml" />
+    <Content Include="Views\DeliveryEvent\Details.cshtml" />
+    <Content Include="Views\DeliveryEvent\Index.cshtml" />
+    <Content Include="Views\DeliveryStop\Details.cshtml" />
+    <Content Include="Views\DeliveryStop\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
